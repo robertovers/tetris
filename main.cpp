@@ -11,12 +11,11 @@
 #include <iostream>
 
 
-Tetris t;
-
-sf::Clock cl;
-
 int main()
 {
+    Tetris t;
+
+    sf::Clock cl;
     
     t.fillBoard();
     
@@ -130,13 +129,12 @@ int main()
                 t.cleared.clear();
             }
         }
-            
-        t.drawBoard();
-        
-        t.drawText();
         
         if (play)
         {
+            t.drawBoard();
+            t.drawText();
+            
             t.drawPiece(t.n);
             t.drawHeldPiece(t.held);
             t.drawNextPieces();
